@@ -1,0 +1,29 @@
+{
+    "paths": {    
+      "reports": "reports",
+      "scripts": "scripts",
+      "tests": "tests",
+      "baseline": "baseline"
+    },
+    "configs": {
+      "env": "dev",
+      "baseUrl": "{{baseUrl}}",   
+      "browserName": "firefox",
+      "viewport": { "width": 1920, "height": 1080 },
+      "asyncLimit": 2,
+      "delay": 0,
+      "beforeAllScript": "beforeAllScript.js",
+      "afterAllScript": "afterAllScript.js",
+      "debugWindow": true
+    },
+    "environments": {
+      "dev": {
+        "baseUrl": "https://dev.vaxed.io",
+        "version": "4.23"
+      },
+      "staging": {
+        "baseUrl": "https://staging.vaxed.io",
+        "version": "4.22"
+      }
+    }
+  }
