@@ -1,25 +1,23 @@
 describe('Core: Playwright Script Tests', () => {
-	const playwright = require('playwright');
-
 	const sinon = require('sinon');
 	const moment = require('moment');
 	const chai = require('chai');
 	const expect = chai.expect;
-	const playwrightScript = require('../core/playwrightScript');
+	const browserScript = require('../core/browserScript');
 	let scenario, configs;
 
 	beforeEach(() => {
 		scenario = {
-			clickSelector: 'text="Buy now"',
-			checkA11ySelector: 'header[class=*Header__HeaderLine]'
+			clickSelector: 'text="About"',
+			checkA11ySelector: '#banner'
 		};
 
 		configs = {
-			baseUrl: 'https://www.atlassian.com'
+			baseUrl: 'https://www.washington.edu/accesscomputing/AU/before.html'
 		};
 	});
 
 	it('should fail when scenario.expected is not set', async () => {
-		await playwrightScript(scenario, configs);
+		await browserScript(scenario, configs);
 	});
 });
